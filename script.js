@@ -121,7 +121,7 @@ optionButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     activityOptions.style.display = "none";
 
-    title.textContent = "Yippeeee!";
+    title.textContent = "сонгож дууссан бол энийг screenshot хийгээд над руу явуулаарай";
     catImg.src = "cat_dance.gif";
     document.querySelector(".letter-window").classList.add("final");
 
