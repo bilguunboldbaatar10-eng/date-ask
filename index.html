@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ Эрхэм хүндэт Нандинзаяад энэ өдрийн мэндийг хүргэе.♡
+            Захиан дээр дарж дараагийн алхам руу шилжээрэй ккк
+      </p>
+    </div>
+
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Надтай цуг кино үзмээр байна уу?</h1>
+
+        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
+        </div>
+
+        <!-- Calendar -->
+        <div id="calendar-container" style="display: none">
+          <div class="cal-head">
+            <button id="prevMonth">‹</button>
+            <span id="calMonthLabel"></span>
+            <button id="nextMonth">›</button>
+          </div>
+          <div class="weekdays">
+            <div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
+          </div>
+          <div class="days" id="daysGrid"></div>
+          <button id="confirmDate" disabled>Confirm Date</button>
+        </div>
+
+        <!-- 3 activity options, shown after a date is confirmed -->
+        <div id="activity-options" style="display: none">
+          <p class="options-prompt">Ямар кино үзмээр байна</p>
+          <div class="options-list">
+            <button class="option-btn" data-activity="insidious"> insidious</button>
+            <button class="option-btn" data-activity="бунхан чөтгөрийн шивнээ"> бунхан чөтгөрийн шивнээ</button>
+            <button class="option-btn" data-activity="homecam ">homecam</button>
+          </div>
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          <strong><span id="chosen-date"></span></strong><br />
+          <span id="chosen-activity"></span><br />
+          
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
